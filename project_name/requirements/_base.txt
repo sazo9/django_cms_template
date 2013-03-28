@@ -1,0 +1,5 @@
+Django
+South==0.7.6
+psycopg2
+Unipath
+model_mommy
