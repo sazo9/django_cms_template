@@ -18,6 +18,9 @@ dbinitial:
 server_dbinitial:
 	python manage.py syncdb --noinput && python manage.py createsuperuser --user admin --email admin@admin.com
 
+schemamigration:
+	python manage.py schemamigration --auto $(APPS)
+
 migrate:
 	python manage.py migrate $(APPS)
 
