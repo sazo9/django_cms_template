@@ -1,0 +1,44 @@
+{% load url from future %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{% block title %}LOOGICA PROJECT{% endblock title %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="{{ STATIC_URL }}/css/foundation.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}/css/app.css">
+  <script src="{{ STATIC_URL }}/js/modernizr.foundation.js"></script>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+  <div class="row">
+    <div class="twelve columns">
+      <h2>{% trans 'Welcome' %}</h2>
+      <hr />
+    </div>
+  </div>
+  {% block content %}
+  <div class="row">
+    <div class="twelve columns">
+      <h1>{% block page_title %}Example Base Template{% endblock page_title %}</h1>
+        <p>Use this document as a way to quick start any new project.</p>
+    </div>
+  <div>
+  {% endblock content %}
+  <script src="{{ STATIC_URL }}/js/jquery.js"></script>
+  <script src="{{ STATIC_URL }}/js/foundation.min.js"></script>
+  <script src="{{ STATIC_URL }}/js/app.js"></script>
+  {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>
