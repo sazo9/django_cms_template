@@ -86,13 +86,13 @@ USE_L10N = True
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
 
-LOCALE_PATHS = normpath(join(SITE_ROOT, 'locale'))
+LOCALE_PATHS = normpath(join(DJANGO_ROOT, 'locale'))
 ########## END GENERAL CONFIGURATION
 
 
 ########## MEDIA CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = normpath(join(SITE_ROOT, 'media'))
+MEDIA_ROOT = normpath(join(DJANGO_ROOT, 'media'))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = '/media/'
@@ -155,7 +155,7 @@ TEMPLATE_LOADERS = (
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
 TEMPLATE_DIRS = (
-    normpath(join(SITE_ROOT, 'templates')),
+    normpath(join(DJANGO_ROOT, 'templates')),
 )
 ########## END TEMPLATE CONFIGURATION
 
