@@ -32,7 +32,7 @@ update_deps:
 
 coverage:
 	coverage run --source="$(shell pwd)" manage.py test $(APPS)
-	coverage html --include="$(shell pwd)*" --omit="admin.py,manage.py"
+	coverage html --include="$(shell pwd)*" --omit="admin.py,manage.py,fabfile.py"
 
 clean:
 	rm -rf htmlcov
