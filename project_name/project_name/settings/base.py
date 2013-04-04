@@ -179,6 +179,10 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = '%s.urls' % SITE_NAME
 ########## END URL CONFIGURATION
 
+# Auth views Config
+LOGIN_URL = "/login"
+LOGIN_REDIRECT_URL = "/"
+# End
 
 ########## APP CONFIGURATION
 DJANGO_APPS = (
