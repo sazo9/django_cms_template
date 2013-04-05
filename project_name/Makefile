@@ -1,8 +1,8 @@
-APPS={{ app_name }}
+APPS=$APP
 
-bootstrap:
-	mkvirtualenv --distribute --python=/usr/local/bin/python -r requirements.txt {{ project_name }}
-	
+venv_boot:
+	mkvirtualenv --distribute --python=/usr/local/bin/python -r requirements.txt $PROJECT
+
 runserver:
 	python manage.py runserver
 
@@ -10,7 +10,7 @@ test:
 	python manage.py test $(APPS)
 
 dbreset:
-	dropdb {{ project_name }} && createdb {{ project_name }} && rm -rf {{ app_name }}/migrations 
+	dropdb $PROJECT && createdb $PROJECT && rm -rf $APP/migrations
 
 dbinitial:
 	python manage.py schemamigration --initial $(APPS) && python manage.py syncdb --noinput && python manage.py createsuperuser --user admin --email admin@admin.com
