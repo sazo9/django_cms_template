@@ -201,7 +201,6 @@ DJANGO_APPS = (
     'menus',
     'south',
     'sekizai',
-    'django_admin_style',
     'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
