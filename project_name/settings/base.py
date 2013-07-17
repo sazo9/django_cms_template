@@ -211,7 +211,6 @@ DJANGO_APPS = (
     'cms.plugins.teaser',
     'cms.plugins.text',
     'cms.plugins.video',
-    'cms.plugins.twitter',
     # Useful template tags:
     # 'django.contrib.humanize',
     'django.contrib.admin',
