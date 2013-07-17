@@ -202,16 +202,16 @@ DJANGO_APPS = (
     'south',
     'sekizai',
     'django_admin_style',
-    'cms.plugins.file'
-    'cms.plugins.flash'
-    'cms.plugins.googlemap'
-    'cms.plugins.link'
-    'cms.plugins.picture'
-    'cms.plugins.snippet'
-    'cms.plugins.teaser'
-    'cms.plugins.text'
-    'cms.plugins.video'
-    'cms.plugins.twitter'
+    'cms.plugins.file',
+    'cms.plugins.flash',
+    'cms.plugins.googlemap',
+    'cms.plugins.link',
+    'cms.plugins.picture',
+    'cms.plugins.snippet',
+    'cms.plugins.teaser',
+    'cms.plugins.text',
+    'cms.plugins.video',
+    'cms.plugins.twitter',
     # Useful template tags:
     # 'django.contrib.humanize',
     'django.contrib.admin',
