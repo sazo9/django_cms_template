@@ -1,5 +1,6 @@
 # coding: utf-8
 """Common settings and globals."""
+import os
 from os.path import abspath, basename, dirname, join, normpath
 from sys import argv, path
 
@@ -206,13 +207,10 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
-    'widget_tweaks',
 )
 
 # Apps specific for this project go here.
-LOCAL_APPS = (
-    '$APP',
-)
+LOCAL_APPS = ()
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
