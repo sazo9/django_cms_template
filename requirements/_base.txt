@@ -1,7 +1,4 @@
 Django==1.5.1
 South==0.7.6
-psycopg2
 Unipath
-model_mommy
-mock
-django-widget-tweaks
+pip install https://github.com/divio/django-cms/zipball/master
