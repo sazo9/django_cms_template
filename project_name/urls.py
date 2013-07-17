@@ -1,14 +1,18 @@
-from django.conf.urls import patterns, include, url
-from django.contrib.auth.views import login, logout
-
+from django.conf.urls.defaults import *
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from django.conf import settings
+
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    (r'^login/$', 'django.contrib.auth.views.login',
-                   {'template_name': 'login.html'}),
-    (r'^logout/$', 'django.contrib.auth.views.logout',
-                   {'template_name': 'logged_out.html'}),
-    url(r'^', include('cms.urls'))
+    url(r'^', include('cms.urls')),
 )
+
+if settings.DEBUG:
+    urlpatterns = patterns('',
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+    url(r'', include('django.contrib.staticfiles.urls')),
+) + urlpatterns
