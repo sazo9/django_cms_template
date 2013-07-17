@@ -162,15 +162,17 @@ TEMPLATE_DIRS = (
 ########## MIDDLEWARE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#middleware-classes
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 ########## END MIDDLEWARE CONFIGURATION
 
@@ -199,6 +201,17 @@ DJANGO_APPS = (
     'menus',
     'south',
     'sekizai',
+    'django_admin_style',
+    'cms.plugins.file'
+    'cms.plugins.flash'
+    'cms.plugins.googlemap'
+    'cms.plugins.link'
+    'cms.plugins.picture'
+    'cms.plugins.snippet'
+    'cms.plugins.teaser'
+    'cms.plugins.text'
+    'cms.plugins.video'
+    'cms.plugins.twitter'
     # Useful template tags:
     # 'django.contrib.humanize',
     'django.contrib.admin',
