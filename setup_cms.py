@@ -4,7 +4,7 @@ import sys
 from fabric.operations import local
 from fabric.context_managers import lcd
 
-TEMPLATE_URL = 'https://github.com/felipecruz/loogica_project_template/archive/master.zip'
+TEMPLATE_URL = 'https://github.com/felipecruz/loogica_django_cms_template/archive/master.zip'
 DJANGO_CMD = 'django-admin.py startproject --template={template} {project}'
 
 if __name__ == "__main__":
