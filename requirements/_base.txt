@@ -1,4 +1,4 @@
-Django==1.5.1
+Django==1.6
 South==0.7.6
 Unipath
 pip install https://github.com/divio/django-cms/zipball/master
